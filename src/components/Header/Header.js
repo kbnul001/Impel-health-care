@@ -5,8 +5,8 @@ import { NavLink } from 'react-router-dom';
 const Header = () => {
     const [navbarOpen, setNavbarOpen] = React.useState(false);
     return (
-        <div className="sticky md:w-full top-0">
-            <nav className=" relative flex flex-wrap items-center justify-between px-2 py-3 bg-indigo-500 mb-3">
+        <div className=" md:w-full top-0">
+            <nav className=" relative flex flex-wrap items-center justify-between px-2 py-3 bg-indigo-500">
                 <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
                     <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
                         <NavLink
@@ -50,7 +50,7 @@ const Header = () => {
                             <li className="nav-item">
                                 <NavLink
                                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                                    to="/courses"
+                                    to="/services"
                                 >
                                     <span className="ml-2">Services</span>
                                 </NavLink>
