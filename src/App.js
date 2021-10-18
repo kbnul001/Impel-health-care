@@ -1,10 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home/Home';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer'
 
 function App() {
   return (
     <div >
-      <h1>This Is Home Page</h1>
+      <BrowserRouter>
+        <Header></Header>
+        <Switch>
+          <Route path="/">
+            <Home></Home>
+          </Route>
+        </Switch>
+        <Footer></Footer>
+      </BrowserRouter>
     </div>
   );
 }

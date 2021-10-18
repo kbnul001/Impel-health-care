@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "name": "Home-delivered meals",
+        "details": "Often called Meals-on-Wheels, many communities offer this service to patients at home who are unable to cook for themselves. Depending on the person's needs, hot meals can be delivered several times a week.",
+        "img": "https://i.ibb.co/j5Pxfy0/delivery-min.jpg",
+        "availability": false
+    },
+    {
+        "id": 2,
+        "name": "Transportation",
+        "details": "There are companies that provide transportation to patients who require transportation to and from a medical facility for treatment or physical exams.",
+        "img": "https://i.ibb.co/NtmH7Bn/transportation-min.jpg",
+        "availability": true
+    },
+    {
+        "id": 3,
+        "name": "Pharmaceutical services",
+        "details": "Medicine and medical equipment can be delivered at home. If the patient needs it, training can be provided on how to take medicines or use of the equipment, including intravenous therapy.",
+        "img": "https://i.ibb.co/9pcDjsm/medicine-min.jpg",
+        "availability": true
+    },
+    {
+        "id": 4,
+        "name": "Nutritional support",
+        "details": "Dietitians can come to a patient's home to provide dietary assessments and guidance to support the treatment plan.",
+        "img": "https://i.ibb.co/hf7QVCw/nutrition-min.jpg",
+        "availability": true
+    },
+    {
+        "id": 5,
+        "name": "Laboratory and X-ray imaging",
+        "details": "Certain laboratory tests, such as blood and urine tests, can be performed in the comfort of the patient's home. In addition, portable X-ray machines allow lab technicians to perform this service at home.",
+        "img": "https://i.ibb.co/DLB9YzT/x-ray-min.jpg",
+        "availability": true
+    },
+    {
+        "id": 6,
+        "name": "Volunteer care",
+        "details": "Volunteers from community organizations can provide basic comfort to the patient through companionship, helping with personal care, providing transportation, emotional support, and/or helping with paperwork.",
+        "img": "https://i.ibb.co/g9mzYfg/care-min.jpg",
+        "availability": true
+    },
+    {
+        "id": 7,
+        "name": "Companionship",
+        "details": "Some patients who are home alone may require a companion to provide comfort and supervision. Some companions may also perform household duties",
+        "img": "https://i.ibb.co/KLWkG0K/companion-min.jpg",
+        "availability": false
+    },
+    {
+        "id": 8,
+        "name": "Doctor care",
+        "details": "A doctor may visit a patient at home to diagnose and treat the illness(es). He or she may also periodically review the home health care needs.",
+        "img": "https://i.ibb.co/SB1Q1R0/doctor-min.jpg",
+        "availability": false
+    },
+    {
+        "id": 9,
+        "name": "Nursing care",
+        "details": "The most common form of home health care is some type of nursing care depending on the person's needs. In consultation with the doctor, a registered nurse will set up a plan of care. Nursing care may include wound dressing, ostomy care, intravenous therapy, administering medication, monitoring the general health of the patient, pain control, and other health support.",
+        "img": "https://i.ibb.co/LnCVH4H/nursing-min.jpg",
+        "availability": false
+    },
+    {
+        "id": 10,
+        "name": "Homemaker or basic assistance care",
+        "details": "While a patient is being medically cared for in the home, a homemaker or person who helps with chores or tasks can maintain the household with meal preparation, laundry, grocery shopping, and other housekeeping items",
+        "img": "https://i.ibb.co/n6p4b9w/assistance-min.jpg",
+        "availability": false
+    }
+]
