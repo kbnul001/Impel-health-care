@@ -3,9 +3,17 @@ import { Link } from 'react-router-dom';
 import useServices from '../../customHooks/UseService';
 import Service from '../Service/Service';
 import './Services.css';
+import { useHistory } from 'react-router';
+
 
 const Services = () => {
     const services = useServices();
+    const history = useHistory();
+
+    const handleSeeDetails = (id) => {
+        history.push(`/${id}`);
+    }
+
     return (
         <div>
             <section className="service-banner md:h-96 flex justify-center items-center">
@@ -25,7 +33,10 @@ const Services = () => {
 
             <div className="grid md:grid-cols-3 gap-16 mx-4 md:mx-20">
                 {
-                    services.map(service => <Service key={services.id} service={service}></Service>)
+                    services.map(service => <Service
+                        key={service.id}
+                        handleSeeDetails={handleSeeDetails}
+                        service={service}></Service>)
                 }
             </div>
         </div>
