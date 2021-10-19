@@ -60,7 +60,7 @@ const Login = () => {
                         <div className="bg-white border px-6 py-6 rounded shadow-md text-black w-full">
                             <h1 className="mb-4 text-3xl text-center">Welcome Back</h1>
                             <h3 className="text-center text-xl mb-6">We Are  <span className="text-indigo-500">Happy</span> to See You Back</h3>
-                            <div className="text-center space-x-12">
+                            <div className="text-center md:space-x-12 space-y-3">
                                 <button onClick={handleGithubSignIn} className="border rounded-md border-gray-400 px-4 py-2 mb-2"> <i class="fab fa-github"></i> Sign in with Github</button>
                                 <button onClick={handleGoogleSignIn} className="border rounded-md border-gray-400 px-4 py-2 mb-2"> <i class="fab fa-google"></i> Sign in with Google</button>
                             </div>
