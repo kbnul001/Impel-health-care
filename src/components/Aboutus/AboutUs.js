@@ -1,5 +1,8 @@
 import React from 'react';
-import { BrowserRouter, Link, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Link, Switch, Route, NavLink } from 'react-router-dom';
+import AboutJourney from '../AboutJourney/AboutJourney';
+import AboutMission from '../AboutMission/AboutMission';
+import Teachers from '../Teachers/Teachers';
 import './AboutUs.css';
 
 const AboutUs = () => {
@@ -22,21 +25,36 @@ const AboutUs = () => {
             <section>
 
                 <BrowserRouter>
-                    <nav className="space-x-7 text-center">
-                        <Link to="/about/journey">Our Journey</Link>
-                        <Link to="/about/mission">Our Mission and Vision</Link>
+                    <nav className="space-x-7
+                    mb-14 text-center">
+                        <NavLink activeStyle={{
+                            paddingBottom: "8px",
+                            borderBottom: "1px solid gray",
+                        }} to="/about/journey">Our Journey</NavLink>
+                        <NavLink activeStyle={{
+                            paddingBottom: "8px",
+                            borderBottom: "1px solid gray",
+                        }} to="/about/mission">Mission and Vision</NavLink>
+
                     </nav>
                     <Switch>
                         <Route exact path="/about/journey">
-
+                            <AboutJourney></AboutJourney>
                         </Route>
                         <Route exact path="/about/mission">
-                            <p className="text-2xl">Our Mission</p>
+                            <AboutMission></AboutMission>
                         </Route>
                     </Switch>
                 </BrowserRouter>
             </section>
-        </div>
+
+            {/* doctors section  */}
+            <section className="my-20">
+                <h1 className="text-3xl text-center md:text-4xl mb-10 font-serif">Our Doctors</h1>
+                <hr className="mx-auto w-3/4" />
+                <Teachers></Teachers>
+            </section>
+        </div >
     );
 };
 
