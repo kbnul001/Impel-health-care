@@ -4,11 +4,13 @@ import useServices from '../../customHooks/UseService';
 import Service from '../Service/Service';
 import './Services.css';
 import { useHistory } from 'react-router';
+import { useState } from 'react/cjs/react.development';
 
 
 const Services = () => {
-    const services = useServices();
+    const { services, loaded } = useServices();
     const history = useHistory();
+
 
     const handleSeeDetails = (id) => {
         history.push(`/${id}`);
@@ -31,14 +33,21 @@ const Services = () => {
 
 
 
-            <div className="grid md:grid-cols-3 gap-16 mx-4 md:mx-20">
-                {
-                    services.map(service => <Service
-                        key={service.id}
-                        handleSeeDetails={handleSeeDetails}
-                        service={service}></Service>)
-                }
-            </div>
+            {
+                !loaded ?
+                    <div className=" flex justify-center items-center">
+                        <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500"></div>
+                    </div>
+                    :
+                    <div className="grid md:grid-cols-3 gap-16 mx-4 md:mx-20">
+                        {
+                            services.map(service => <Service
+                                key={service.id}
+                                handleSeeDetails={handleSeeDetails}
+                                service={service}></Service>)
+                        }
+                    </div>
+            }
         </div>
     );
 };

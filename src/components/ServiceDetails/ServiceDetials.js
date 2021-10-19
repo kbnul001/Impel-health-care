@@ -5,7 +5,7 @@ import useServices from '../../customHooks/UseService';
 
 const ServiceDetials = () => {
     const { serviceId } = useParams();
-    const services = useServices();
+    const { services } = useServices();
 
     const specificService = services.find(sv => sv.id == serviceId);
 

@@ -1,9 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import useAuth from '../../customHooks/useAuth';
 
 
 const Header = () => {
+    const { user, logOut, setUser } = useAuth();
     const [navbarOpen, setNavbarOpen] = React.useState(false);
+
+    const handleLogOut = () => {
+        logOut();
+        setUser(null);
+    }
+
     return (
         <div className=" md:w-full top-0">
             <nav className=" relative flex flex-wrap items-center justify-between px-2 py-3 bg-indigo-500">
@@ -58,11 +66,32 @@ const Header = () => {
                             <li className="nav-item">
                                 <NavLink
                                     className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
-                                    to="/mycourses"
+                                    to="/healthnews"
                                 >
-                                    <span className="ml-2">Sign in</span>
+                                    <span className="ml-2">Health News</span>
                                 </NavLink>
                             </li>
+                            {
+                                !user ?
+                                    <li className="nav-item">
+                                        <NavLink
+                                            className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-white hover:opacity-75"
+                                            to="/signin"
+                                        >
+                                            <span className="ml-2">Sign in</span>
+                                        </NavLink>
+                                    </li>
+                                    :
+                                    <li className="nav-item">
+                                        <NavLink
+                                            onClick={handleLogOut}
+                                            className="px-3 py-2 flex items-center text-xs uppercase font-bold leading-snug text-red-400 hover:opacity-75"
+                                            to="/signin"
+                                        >
+                                            <span className="ml-2">Sign Out <span className="text-white"> ({user?.displayName})</span> </span>
+                                        </NavLink>
+                                    </li>
+                            }
 
                         </ul>
                     </div>

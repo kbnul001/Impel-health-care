@@ -4,7 +4,7 @@ import useServices from '../../customHooks/UseService';
 import Service from '../Service/Service';
 
 const ServiceHome = () => {
-    const services = useServices();
+    const { services } = useServices();
     const filteredServices = services.filter(sv => sv.id <= 6);
     const history = useHistory();
 
