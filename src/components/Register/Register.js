@@ -63,7 +63,6 @@ const Register = () => {
                 })
                 .finally(() => {
                     setIsLoading(false);
-
                 })
         }
         else {
