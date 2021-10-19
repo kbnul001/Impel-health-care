@@ -6,7 +6,7 @@ const HealthNews = () => {
     const [news, setNews] = useState([]);
     const [newsLoaded, setNewsLoaded] = useState(false);
     useEffect(() => {
-        fetch('https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=9ba33d5788e1466ba56e4f391d112768')
+        fetch('/news_data.json')
             .then(res => res.json())
             .then(data => {
                 setNews(data.articles)
@@ -30,9 +30,9 @@ const HealthNews = () => {
                         <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500"></div>
                     </div>
                     :
-                    <section className="grid grid-cols-1 mx-20">
+                    <section className="grid grid-cols-1 mx-8 md:mx-20">
                         {
-                            articles.map(nw => <SingleNews
+                            articles?.map(nw => <SingleNews
                                 key={nw.publishedAt}
                                 img={nw.urlToImage}
                                 title={nw.title}

@@ -38,7 +38,7 @@ const AboutUs = () => {
 
                     </nav>
                     <Switch>
-                        <Route exact path="/about/journey">
+                        <Route path="/about/journey">
                             <AboutJourney></AboutJourney>
                         </Route>
                         <Route exact path="/about/mission">

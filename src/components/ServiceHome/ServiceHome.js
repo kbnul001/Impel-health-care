@@ -9,12 +9,12 @@ const ServiceHome = () => {
     const history = useHistory();
 
     const handleSeeDetails = (id) => {
-        history.push(`/${id}`);
+        history.push(`/service/${id}`);
     }
 
     return (
         <div className="my-16">
-            <h1 className="text-5xl font-serif text-gray-700 text-center font-medium mb-16">Our Top Services</h1>
+            <h1 className="text-4xl  md:text-5xl font-serif text-gray-700 text-center font-medium mb-16">Our Top Services</h1>
             <div className="grid md:grid-cols-3 gap-16 mx-4 md:mx-20">
                 {
                     filteredServices.map(service => <Service handleSeeDetails={handleSeeDetails} key={services.id} service={service}></Service>)
