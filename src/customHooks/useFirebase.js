@@ -49,7 +49,7 @@ const useFirebase = () => {
     //update name
     const setUserName = (name) => {
         updateProfile(auth.currentUser, {
-            displayName: name
+            displayName: name,
         }).then(() => {
 
         }).catch((err) => {
