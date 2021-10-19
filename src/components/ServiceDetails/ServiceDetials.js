@@ -9,11 +9,9 @@ const ServiceDetials = () => {
 
     const specificService = services.find(sv => sv.id == serviceId);
 
-
     return (
         <div className="my-20 md:mx-20 mx-6">
-            {/* <h1>ID: {serviceId}</h1>
-            <h1>services:{services.length} </h1> */}
+
             <section className="md:flex md:gap-7">
                 <div className="md:w-1/2"><img className="rounded-xl" src={specificService?.img} alt="" /></div>
                 <div className="md:w-1/2 my-auto space-y-12">
